@@ -1,2 +1,2 @@
 # RACCROCHE
-Ancestral flowering plant genomes reconstruction
+A pipeline for ancestral plant genome inference
