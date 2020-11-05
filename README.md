@@ -1,11 +1,14 @@
-# RACCROCHE 
+# RACCROCHE (Reconstruction of AnCestral COntigs and CHromosomEs)
 
 [![N|Solid](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-**Reconstruction of AnCestral COntigs and CHromosomEs: ancestral flowering plant chromosomes and gene orders based on generalized adjacencies and chromosomal gene co-occurrences**:  
-There are four major modules including seven steps in the pipeline:
+**Overview
+
+Given the phylogenetic relationships of several extant species, the reconstruction of their ancestral genomes at the gene and chromosome level is made difficult by the cycles of whole genome doubling followed by fractionation in plant lineages. Fractionation scrambles the gene adjacencies that enable existing reconstruction methods. We propose an alternative approach that postpones the selection of gene adjacencies for reconstructing small ancestral segments and instead accumulates a very large number of syntenically validated candidate adjacencies to produce long ancestral contigs through maximum weight matching. Likewise, we do not construct chromosomes by successively piecing together contigs into larger segments, but instead count all contig co-occurrences on the input genomes and cluster these, so that chromosomal assemblies of contigs all emerge naturally ordered at each ancestral node of the phylogeny. These strategies result in substantially more complete reconstructions than existing methods. We deploy a number of quality measures: contig lengths, continuity of contig structure on successive ancestors, coverage of the reconstruction on the input genomes, and rearrangement implications of the chromosomal structures obtained. The reconstructed ancestors can be functionally annotated and are visualized by painting the ancestral projections on the descendant genomes, and by highlighting syntenic ancestor-descendant relationships. Our methods can be applied to genomes drawn from a broad range of clades or orders. Together with the pipeline, we provide our project data on six genomes of monocot orders, confirming the tetraploidization event “tau” in the stem lineage between the alismatids and the lilioids.
+
+There are four major modules including seven steps in the RACCROCHE pipeline:
   
   Module 1
   - Step 1: Pre-process gene families
