@@ -2,10 +2,6 @@ include README.md
 include LICENSE
 include .pylintrc
 include *.txt
-recursive-include test/data *
-recursive-include test/test_functional *.py
-recursive-include test/test_unit *.py
 include doc
-include doc/test.pdf
-recursive-include Examples *
+
 
