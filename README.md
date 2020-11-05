@@ -4,18 +4,31 @@
 
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-**Reconstruction of AnCestral COntigs and CHromosomEs**:  
-It has two main modules: constructing contigs and painting  ancestors on genomes.
-  - Ancestors contigs generating
-  - Ancestors painting on genomes 
+**Reconstruction of AnCestral COntigs and CHromosomEs: ancestral flowering plant chromosomes and gene orders based on generalized adjacencies and chromosomal gene co-occurrences**:  
+There are four major modules including seven steps in the pipeline:
+  *** Module 1
+  - Step 1: Pre-process gene families
+  - Step 2: List generalized adjacencies
+  - Step 3: List candidate adjacencies
+  *** Module 2
+  - Step 4: Construct contigs
+  *** Module 3
+  - Step 5: Match synteny blocks between ancestral genome and extant genomes
+  - Step 6: Cluster ancestral contigs into ancestral chromosomes
+  - Step 7: Painting the extant genomes according to the ancestral chromosomes
+  *** Module 4
+  - Step 8: Adapting MCScanX to match ancestral genomes with extant genomes
+  - Step 9: Measures of Quality
 
 |  |  |
 | ------ | ------ |
 |Authors | Qiaoji Xu ([QiaojiXu]) |
 |  | Lingling Jin ([LinglingJin]) |
+|  | Chunfang Zheng |
 |  | James H. Leeben-Mack |
 |  | David Sankoff |
 | Emails | limqiaojixu@gmail.com|
+|  | lingling.jin@cs.usask.ca |
 | License | [BSD] |
 
 ### Citations:   
