@@ -1,0 +1,58 @@
+####module	1
+Python3 module1/main.py
+
+
+####module	2
+#install it first according to the manual 
+cd /which folder/contain/all/mwm/input/files
+python3 module2_main  -g genefamily_file -p parameters_file -r results_dir
+
+
+####module	3
+echo
+echo "========== Parsing and cleaning up gene families =========="
+echo
+#python replace_gene_family.py
+echo "     Finished parsing and cleaning up gene families "
+
+
+echo
+echo
+echo
+echo "================================================================================" 
+echo "========== Summarizing contig statistics for each ancestor =========="
+echo
+Rscript module3/summarizeCtgLen.R
+
+
+echo
+echo
+echo
+echo "================================================================================" 
+echo "========== Extracting gene family features for each ancestor and each genome =========="
+echo "========== This step is very slow ... "
+echo
+Rscript module3/getContigGenes.R
+
+
+
+echo
+echo
+echo
+echo "================================================================================" 
+echo "========== Analyzing contig co-occurence =========="
+echo "========== This step is very slow ... "
+echo
+Rscript module3/analyze.R 
+echo "========== Check out results/clustering folder for clustering results"
+echo
+
+
+echo
+echo
+echo
+echo "================================================================================" 
+echo "========== Painting ancestors on extant genomes =========="
+echo
+Rscript module3/paintChr.R 
+echo

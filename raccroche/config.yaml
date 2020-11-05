@@ -1,0 +1,41 @@
+
+## input: path to data folder
+data.path: "~/Desktop/raccroche/project-monocots"
+
+
+# window size
+ws:     
+  - 7
+  
+# gene family size para1: the maximum number of genes in a gene family
+gf1:
+  - 50
+
+# gene family size para2: the maximum number of genomes in a gene family
+gf2:
+  - 10
+
+# specify the desired number of ancestral chromosomes
+K: 7  
+
+
+## set thresholds
+ctgLen: 1   ## minimum length in each contig
+nctg: 250    ## only include first nctg contigs
+
+## threshold of distance (1MB) between two genes in the same contig on the same chromosome
+## if the distance between two genes is smaller than the threshold, merge them into one block
+DIS.threshold: 1000000
+
+## threshold to visualize the gene/block (150 kb)
+## if a block is less than this length, do not show it --> keep the plot clean
+blockLEN.threshold: 150000
+
+
+## threshold for coocurrence analysis
+## only count blocks that are longer than 15KB
+lenBLK.threshold: 15000 
+
+
+
+
