@@ -10,20 +10,20 @@ Given the phylogenetic relationships of several extant species, the reconstructi
 
 There are four major modules including seven steps in the RACCROCHE pipeline:
   
-  # Module 1
+  ### Module 1
   - Step 1: Pre-process gene families
   - Step 2: List generalized adjacencies
   - Step 3: List candidate adjacencies
   
-  # Module 2
+  ### Module 2
   - Step 4: Construct contigs
   
-  # Module 3
+  ### Module 3
   - Step 5: Match synteny blocks between ancestral genome and extant genomes
   - Step 6: Cluster ancestral contigs into ancestral chromosomes
   - Step 7: Painting the extant genomes according to the ancestral chromosomes
   
-  # Module 4
+  ### Module 4
   - Step 8: Adapting MCScanX to match ancestral genomes with extant genomes
   - Step 9: Measures of Quality
 
