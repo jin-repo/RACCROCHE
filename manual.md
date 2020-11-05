@@ -1,9 +1,9 @@
 
-### Dependencies
+## Dependencies
 
-### Content 
+## Content 
 
-### Input
+## Input
 
   - a gene family size file, in csv format with 3 columns 'GeneFamly', 'Size', 'Genome' 
   - parameters txt file, containing all parameters for running this program, the format is:  
@@ -17,13 +17,13 @@
 
 You can also:
   - find examples of these files in the "Examples" directory, and a description of those file formats in the pdf documentation **(not finish yet)**  
-### Output
+## Output
 * ``ancestor contigs``
 * ``retained mwm adjacencies of ancestor``
 * ``intermediate output in process``
 All files generated in process are stored in `java` and `InputPyfile` two folders
 
-### Installation
+## Installation
 
 raccroche requires `python v3+` to run.  
 To install the package *raccroche*, and all its dependances, from the root directory, just do::  
