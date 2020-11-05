@@ -1,10 +1,29 @@
+##### read in genomes to be analyzed
+readIn.genomes <- function(data.path, fname){
+  
+  genomes.fname <- file.exists(file.path(data.path, fname))
+  print(genomes.fname)
+  if (length(genomes.fname)==0) {
+    errorMessage <- paste0("Can't find input genomes file ",
+                           "\nPlease check if the file exists under ", data.path)
+    stop(errorMessage)
+  }
+  
+  genomeCoGeID <- read.delim(file.path(data.path, fname), header=TRUE)
+  return(genomeCoGeID)
+}
+
 
 ##### read in karyotype chromosome
 readIn.karyotype <- function(karyotype.path, gID){
   ## read in karyotype chromosome
   karyotype.fname <- list.files(karyotype.path, pattern=paste0("*_",gID,"_*"))
   print(karyotype.fname)
-  if (length(karyotype.fname)==0) {next}
+  if (length(karyotype.fname)==0) {
+    errorMessage <- paste0("Can't find karyotype for ", genomeCoGeID[genomeCoGeID$genomeID == gID,]$genomeName,
+                           "\nPlease check if the file(s) exist under ", karyotype.path)
+    stop(errorMessage)
+    }
   karyotype <- read.delim(file.path(karyotype.path, karyotype.fname), header=TRUE)
   
   return(karyotype)
@@ -15,7 +34,12 @@ readIn.contigGFF <- function(gID, ws, trn, gf1, gf2, Nctg, contigGFF.path){
   
     contigGFF.fname <- list.files(contigGFF.path, pattern=paste0("*",gID,"_W",ws,"TreeNode",trn,"_",gf1,"_",gf2,".txt"))
     print(contigGFF.fname)
-    if (length(contigGFF.fname)==0) {return ()}
+    if (length(contigGFF.fname)==0) {
+      errorMessage <- paste0("Can't find contig GFF file for ancestor", genomeCoGeID[genomeCoGeID$genomeID == gID,]$ancestor,
+                             " genome ", genomeCoGeID[genomeCoGeID$genomeID == gID,]$genomeName, 
+                             "\nPlease check if the file(s) exist under ", contigGFF.path)
+      stop(errorMessage)
+      }
     
     contigGFF <- read.delim(file.path(contigGFF.path, contigGFF.fname), header=FALSE, row.names=NULL, stringsAsFactors = FALSE)
     colnames(contigGFF) <- c("chr",	"geneFamilyID",	"pos",	"contig", "start", "end", "geneName")
