@@ -30,7 +30,6 @@ There are four major modules including seven steps in the RACCROCHE pipeline. Sc
 See the [manual](./manual.md) for how to install and use the pipeline.
 
 |  |  |
-| ------ | ------ |
 |Authors | Qiaoji Xu ([QiaojiXu]) |
 |  | Lingling Jin ([LinglingJin]) |
 |  | Chunfang Zheng |
