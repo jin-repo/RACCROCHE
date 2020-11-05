@@ -43,8 +43,6 @@ See the [manual](./manual.md) for how to install and use the pipeline.
 ### Citations:   
   - If you use the raccroche pipline for ancestral contigs reconstruction, please cite:   
 *RACCROCHE: ancestral flowering plantchromosomes and gene ordersbased on generalized adjacenciesand chromosomal gene co-occurrences* [need to add link]  
-## Ancestors contigs generating
---------------------------------
 
 
    [QiaojiXu]: <https://github.com/Qiaojilim>
