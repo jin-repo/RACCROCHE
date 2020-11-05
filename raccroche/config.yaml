@@ -1,6 +1,6 @@
 
-## input: path to data folder
-data.path: "~/racchroche/project-monocots"
+## input: path to project data folder
+data.path: "~/RACCROCHE/project-monocots"
 
 
 # window size
