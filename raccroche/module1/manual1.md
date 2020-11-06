@@ -5,7 +5,7 @@ You can chnage the input paramenters from here.
 ### Dependencies
  - java
  - python>=3
-### [Usage](../run_raccroche)
+### [Usage](../run_raccroche.txt)
 For a classic use of raccroche module 1, you need to download the folder `raccroche/module1`
 in terminal, we run::
 ```
