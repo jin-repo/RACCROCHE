@@ -6,7 +6,7 @@ This module 2 is designed to generate ancestors contig from the output of module
  - java
 ### Content 
 
-### [Usage](./raccroche/run_raccroche)
+### [Usage](../run_raccroche)
 For a classic use of raccroche module 2, you can install the package by the following command. Then,
 from anywhere in your computer, run::
 ```
