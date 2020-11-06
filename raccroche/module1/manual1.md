@@ -1,6 +1,6 @@
 # Module 1
 This module 1 is designed to generate original gene family and initial tree nodes adjacensies.
-### contig.yaml
+### [contig.yaml](./raccroche/contig.yaml)
 You can chnage the input paramenters from here.
 ### Dependencies
  - java
