@@ -10,15 +10,15 @@ Given the phylogenetic relationships of several extant species, the reconstructi
 
 There are four major modules including seven steps in the RACCROCHE pipeline. Scripts in the pipeline are organized according to the modules as depicted in the [diagram of program architechture and file structure](./documentation/program-vs-file-structure.svg).
   
-  ### Module 1
+  ### [Module 1] (./manual1.md)
   - Step 1: Pre-process gene families
   - Step 2: List generalized adjacencies
   - Step 3: List candidate adjacencies
   
-  ### Module 2
+  ### [Module 2] (./manual2.md)
   - Step 4: Construct contigs by maximum weight matching
   
-  ### Module 3
+  ### [Module 3] (./manual3.md)
   - Step 5: Match synteny blocks between ancestral genome and extant genomes
   - Step 6: Cluster ancestral contigs into ancestral chromosomes based on contig co-occurrence
   - Step 7: Paint the extant genomes according to the ancestral chromosomes
@@ -29,7 +29,7 @@ There are four major modules including seven steps in the RACCROCHE pipeline. Sc
   - Step 8: Adapt MCScanX to match ancestral genomes with extant genomes
   - Step 9: Measures of Quality
 
-See the [manual](./manual.md) for how to install and use the pipeline.
+See the manuals for how to install and use the pipeline.
 
 In addition to the pipeline, we also provide our project data (under the "project-monocots" directory) on six genomes of monocot orders, confirming the tetraploidization event “tau” in the stem lineage between the alismatids and the lilioids. 
 
