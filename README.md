@@ -22,6 +22,7 @@ There are four major modules including seven steps in the RACCROCHE pipeline. Sc
   - Step 5: Match synteny blocks between ancestral genome and extant genomes
   - Step 6: Cluster ancestral contigs into ancestral chromosomes
   - Step 7: Painting the extant genomes according to the ancestral chromosomes
+  More details are described in the [diagram of module 3 program architechture and file structure](./documentation/Module3-structure.svg).
   
   ### Module 4
   - Step 8: Adapting MCScanX to match ancestral genomes with extant genomes
