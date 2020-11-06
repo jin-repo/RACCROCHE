@@ -33,6 +33,6 @@ You can also:
 
 ## Installation
 RACCROCH module 1 do not need to install packages, the only thing we need is java and python3  enviroment.
-You will then be able to use RACCROCHE module 3 by command.
+You will then be able to use RACCROCHE module 1 by command.
 
 
