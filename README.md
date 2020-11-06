@@ -16,7 +16,7 @@ There are four major modules including seven steps in the RACCROCHE pipeline. Sc
   - Step 3: List candidate adjacencies
   
   ### Module 2
-  - Step 4: Construct contigs
+  - Step 4: Construct contigs by maximum weight matching
   
   ### Module 3
   - Step 5: Match synteny blocks between ancestral genome and extant genomes
