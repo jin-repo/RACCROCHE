@@ -1,7 +1,7 @@
 # Module 1
 This module 1 is designed to generate original gene family and initial tree nodes adjacensies.
 ### [config.yaml](../config.yaml)
-You can chnage the input paramenters from here.
+You can change the input paramenters from here.
 ### Dependencies
  - java
  - python>=3
