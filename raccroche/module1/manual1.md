@@ -1,11 +1,11 @@
 # Module 1
 This module 1 is designed to generate original gene family and initial tree nodes adjacensies.
-### [contig.yaml](./raccroche/contig.yaml)
+### [contig.yaml](./contig.yaml)
 You can chnage the input paramenters from here.
 ### Dependencies
  - java
  - python>=3
-### [Usage](./raccroche/run_raccroche)
+### [Usage](./run_raccroche)
 For a classic use of raccroche module 1, you need to download the folder `raccroche/module1`
 in terminal, we run::
 ```
