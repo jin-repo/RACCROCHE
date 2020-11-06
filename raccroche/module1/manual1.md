@@ -27,7 +27,7 @@ You can also:
   - find examples of these files in the `project-monocots/data/ContigGFF` and  `project-monocots/data/GeneFamily` directory
 ## Output
 * ``GeneFamily65.txt``
-* ``genomes.txtr``
+* ``genomes.txt``
 * ``initial tree nodes adjacensies``
 
 ## Installation
