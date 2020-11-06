@@ -1,18 +1,9 @@
-####module	1
-Python3 module1/main.py
 
 
-####module	2
-#install it first according to the manual 
-cd /which folder/contain/all/mwm/input/files
-python3 module2_main  -g genefamily_file -p parameters_file -r results_dir
-
-
-####module	3
 echo
 echo "========== Parsing and cleaning up gene families =========="
 echo
-#python replace_gene_family.py
+#python parse_gene_family.py
 echo "     Finished parsing and cleaning up gene families "
 
 

@@ -1,4 +1,5 @@
 source("./module3/utilities.R")
+source("./module3/helper.R")
 
 #### Install reqired packages in R Console
 packages<-c("yaml","gplots", "ggplot2", "dplyr", "scales", "grid", "gridExtra", "data.table", "RColorBrewer", "varhandle", "cowplot", "plyr", "spaa","CRPClustering", "taRifx")
@@ -26,7 +27,7 @@ gf2 <- config.obj$gf2  # gene family size para2: the maximum number of genomes i
 
 
 ## input: read in CoGeIDs for all genomes
-genomeCoGeID <- read.delim(file.path(config.obj$data.path, "Genomes.txt"), header=TRUE)
+genomeCoGeID <- readIn.genomes (config.obj$data.path, "Genomes.txt")
 ## tree nodes to analyze
 trn.vector <- sort(unique(genomeCoGeID$ancestor)) 
 ## genomes to analyze
