@@ -1,10 +1,9 @@
-<<<<<<< HEAD:raccroche/run_racchroche
 #!/bin/bash
-=======
+
+
 ####module	1
 Python3 module1/main.py
 
->>>>>>> 77950d154f980f346a261fd6078a6bce2119a448:raccroche/run_raccroche
 
 ####module	2
 #install it first according to the manual 
