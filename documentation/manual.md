@@ -1,5 +1,5 @@
 ## Dependencies
-The raccroche package requires `Python 3`, `R version 3.6.3` or higher.
+The raccroche package requires `Python 3` and `R version 3.6.3`.
 
 
 ## Config file
@@ -20,6 +20,7 @@ Before running the program, you need to make sure to edit the desired yaml confi
 
 `nctg`
 > The number of contigs in each ancestor to be includeded in the downstream analysis.
+> The `nctg` is selected to best by the length distribution of contigs
 
 
 `DIS.threshold`
@@ -36,6 +37,28 @@ Before running the program, you need to make sure to edit the desired yaml confi
 `lenBLK.threshold`
 > The threshold for coocurrence analysis.
 > The default is `15000 `, which only counts blocks that are longer than 15 Kbp for cooccurrence.
+
+
+
+## Files
+The file structure is depicted in the [diagram of program architechture and file structure](./documentation/program-vs-file-structure.svg). 
+All the input and output data is located in the project data folder (i.e. `~/RACCROCHE/project-monocots`).
+
+### Input
+
+`Genomes.txt`
+
+> An example showing the format genomes data (note that they must be delimited by tab characters):
+
+      genomeID  genomeName  ancestor  numChr
+      54711	    Acorus	1	12
+      51364 Spirodela 1	20
+      51051 Dioscorea	2	21
+      33908 Asparagus	3	10
+      25734 Ananas	4	25
+      33018 Elaeis	4	16
+
+
 
 
 # Module 1: construct gene families and list candidate adjacencies
