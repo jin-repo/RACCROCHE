@@ -59,3 +59,23 @@ echo "========== Painting ancestors on extant genomes =========="
 echo
 Rscript module3/paintChr.R 
 echo
+
+
+echo
+echo
+echo
+echo "================================================================================" 
+echo "========== Sorting contigs within ancestral chromosomes =========="
+echo
+Rscript module3/sortContigs.R 
+echo
+
+echo
+echo
+echo
+echo "================================================================================" 
+echo "========== Sorting ancestral chromosomes =========="
+echo
+Rscript module3/sortChromosomes.R 
+echo
+
