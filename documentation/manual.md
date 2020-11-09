@@ -1,3 +1,39 @@
+## config file
+Before running the program, you need to make sure to edit the desired yaml file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
+
+`data.path` 
+> The path to the project data folder. For example, `~/RACCROCHE/project-monocots`.
+
+`ws` 
+> The window size to select candidate adjacencies. The default is `7`.
+
+`gf1` 
+> The maximum number of genes in a gene family in all genomes. The default is `50`.
+
+`gf2` 
+> The maximum number of genes in a gene family in every genome. The default is `10`.
+
+
+`nctg`
+> The number of contigs in each ancestor to be includeded in the downstream analysis.
+
+
+`DIS.threshold`
+> The threshold of distance between two genes in the same contig on the same chromosome.
+> If the distance between two genes is smaller than the threshold, merge them into one block
+> The default is `1000000`, that is, 1 Mbp.
+
+`blockLEN.threshold`
+> The threshold to visualize the synteny blocks.
+> If a block is shorter than this length, do not show it. This helps keep the chromosome plot clean.
+> The default is `150000`, which only shows blocks longer than 150 Kbp.
+
+
+`lenBLK.threshold`
+> The threshold for coocurrence analysis.
+> The default is `15000 `, which only counts blocks that are longer than 15 Kbp for cooccurrence.
+
+
 # Module 1: construct gene families and list candidate adjacencies
 ## Dependencies
 
@@ -5,7 +41,6 @@
 
 ## Usage
 
-### yaml config file
 
 ## Input
 
@@ -74,11 +109,21 @@ $ sudo pip3 uninstall raccroche
 $ To Be Continued...
 ```
 
-# Module 2: Construct ancestral contigs by Maximum Weight Matching
+# Module 2: construct ancestral contigs by Maximum Weight Matching
 
 
-# Module 3: Match contigs, cluster and sort ancestral chromosomes, paint extant genomes
+# Module 3: match contigs, cluster and sort ancestral chromosomes, paint extant genomes with ancestral chromosomes
 
+## Dependencies
+R version 3.6.3
+
+## Content 
+
+## Usage
+
+## Input
+
+## Output
 
 
 
