@@ -1,3 +1,7 @@
+## Dependencies
+The raccroche package requires `Python 3`, `R version 3.6.3` or higher.
+
+
 ## Config file
 Before running the program, you need to make sure to edit the desired yaml config file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
 
@@ -114,8 +118,7 @@ $ To Be Continued...
 
 # Module 3: match contigs, cluster and sort ancestral chromosomes, paint extant genomes with ancestral chromosomes
 
-## Dependencies
-R version 3.6.3
+
 
 ## Content 
 
