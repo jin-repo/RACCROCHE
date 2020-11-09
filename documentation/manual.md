@@ -51,12 +51,12 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 > An example showing the format genomes data (note that they must be delimited by tab characters):
 
       genomeID    genomeName  ancestor  numChr
-      54711       Acorus	1	12
-      51364       Spirodela   1	20
-      51051       Dioscorea	2	21
-      33908       Asparagus	3	10
-      25734       Ananas	4	25
-      33018       Elaeis	4	16
+      54711       Acorus	      1	12
+      51364       Spirodela         1	20
+      51051       Dioscorea	      2	21
+      33908       Asparagus	      3	10
+      25734       Ananas	      4	25
+      33018       Elaeis	      4	16
 
 
 
