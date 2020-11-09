@@ -29,7 +29,7 @@ There are four major modules including seven steps in the RACCROCHE pipeline. Sc
   - Step 8: Adapt MCScanX to match ancestral genomes with extant genomes
   - Step 9: Measures of Quality
 
-See the manuals for how to install and use the pipeline.
+See the [manual](./documentation/manual.md) for how to install and use the pipeline.
 
 In addition to the pipeline, we also provide our project data (under the "project-monocots" directory) on six genomes of monocot orders, confirming the tetraploidization event “tau” in the stem lineage between the alismatids and the lilioids. 
 
