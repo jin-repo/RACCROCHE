@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 echo
 echo "========== Parsing and cleaning up gene families =========="

@@ -19,8 +19,7 @@ ws <- config.obj$ws # window size
 gf1 <- config.obj$gf1  # gene family size para1: the maximum number of genes in a gene family
 gf2 <- config.obj$gf2  # gene family size para2: the maximum number of genomes in a gene family
 
-
-
+K <- config.obj$K  # desired number of ancestral chromosomes
 
 ############################################################
 ################## check input directories ####################

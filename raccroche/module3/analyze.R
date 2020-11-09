@@ -39,7 +39,11 @@ for (trn in trn.vector){
     
     ### read in gene features in contig
     contigGFF <- readIn.contigGFF(gID, ws, trn, gf1, gf2, nctg, contigGFF.path)  
-    if(is.null(contigGFF)) {cat("File doesn't exist!"); next} ## if file doesn't exist, go to next iteration
+    if(is.null(contigGFF)) {
+      warningMessage <- paste0("*",gID,"_W",ws,"TreeNode",trn,"_",gf1,"_",gf2,".txt file doesn't exist under ", contigGFF.path)
+      warning(warningMessage); 
+      next
+      } ## if file doesn't exist, go to next iteration
     
     ### merge genes in contigGFF that are within a DIS.threshold distance in extant genome into blocks
     blockDF <- generate.blockDF.2(contigGFF, DIS.threshold, ws) ## blocks with window size ws
@@ -123,7 +127,11 @@ for (trn in trn.vector){
   ### then construct the cooccurrence matrix
   ############################################
   
-  if(length(ctgPairs)==0) {next}
+  if(length(ctgPairs)==0) {
+    warningMessage <- paste0("No contig pairs detected (co-occurred contigs) in genome ", gName)
+    warning(warningMessage); 
+    next
+    }
   
   ## count frequencies of uniq ctgPairs
   pairs.freq <- data.frame(t(ctgPairs))

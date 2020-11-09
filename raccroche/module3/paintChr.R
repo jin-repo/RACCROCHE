@@ -7,7 +7,8 @@
 ### input:  1. genome IDs and ancestor tree nodes defined in Genomes.txt 
 ###         2. extant genome karyotypes defined in "karyotype" folder: karyotype_genomeID_genomeName.txt, 
 ###             where genomeID and genomeName match the info in Genomes.txt 
-###         3. clustering results in ./data/clustering/
+###         3. contig gene feature files for each descendent genome in ./data/contigGFF/ContigGFF_gid_W*TreeNode*_*_*.txt
+###         4. clustering results in ./data/clustering/
 ### output: 1. painted chromosomes: results/paintedChrs/ancestor[trn]-[genomeName].pdf
 ###         2. choppinness : results/ancestorStats/choppiness_sum.csv
 
@@ -42,11 +43,11 @@ for(trn in trn.vector){
     contigGFF <- readIn.contigGFF(gID, ws, trn, gf1, gf2, nctg, contigGFF.path)
     
     
-    ## generate plotting data from contigGFF !!! plotDF is the same as blockDF in analyze.R
+    ## generate plotting data from contigGFF !!!
     ## 7 cloumns in contigGFF: "chr",	"geneFamilyID",	"pos",	"contig", "start", "end", "distance"
-    ## plotDF columns: chr, start, end, contig --> make sure they are all numeric
+    ## blockDF columns: chr, start, end, contig --> make sure they are all numeric
     ### merge genes in contigGFF that are within a DIS.threshold distance in extant genome into blocks
-    plotDF <- generate.blockDF.2(contigGFF, DIS.threshold, ws)
+    blockDF <- generate.blockDF.2(contigGFF, DIS.threshold, ws)
     
     
     ## read in ancestral chromosomes from the clustering results
@@ -57,20 +58,23 @@ for(trn in trn.vector){
     
     
     ## add one column: ancestralChr from corresponding cl$cluster
-    plotDF[,"contig"] <- as.numeric(as.character(plotDF$contig)) ## unfactorize column contig
-    plotDF <- merge(plotDF, clusters)
-    plotDF <- plotDF[order(plotDF$chr,plotDF$start),]
-    plotDF <- plotDF[ , c("chr", "start", "end", "contig", "ancestralChr")]
+    blockDF[,"contig"] <- as.numeric(as.character(blockDF$contig)) ## unfactorize column contig
+    blockDF <- merge(blockDF, clusters)
+    blockDF <- blockDF[order(blockDF$chr,blockDF$start),]
+    blockDF <- blockDF[ , c("chr", "start", "end", "contig", "ancestralChr")]
     
     
-  
+    # ### export synteny blocks before merging
+    # ### this will be used to order contigs within each ancestral chromosome using LOP
+    # write.csv(blockDF, file=file.path(results.path, "clustering", "AncestralSyntenyBlocks.csv"), row.names=FALSE)
+    
     ##############################################
     ### generate plots of painted extant genomes
     ##############################################
     
     ## merge adjancent blocks if their distance is within DIS.threshold (i.e. 1 MB)
     ## only choose blocks longer than blockLEN threshold to merge
-    mergedDF <- mergeBlockDF(plotDF[(end-start) > blockLEN.threshold,], DIS.threshold)
+    mergedDF <- mergeBlockDF(blockDF[(end-start) > blockLEN.threshold,], DIS.threshold)
     mergedDF <- as.data.table(mergedDF)
     mergedDF[, len := end - start ]
     
@@ -138,8 +142,11 @@ choppiness.sum[, "R-X" := r-x]
 choppiness.sum <- merge(genomeCoGeID[,1:2], choppiness.sum, by = "genomeID")
 setorder(choppiness.sum, genomeID, Ancestor.map)
 
+###################################
 ## output choppiness stats to file
+## details for debuging
 # write.csv(choppiness, file=file.path(results.path, "ancestorStats", "choppiness_raw.csv"), row.names=TRUE) 
+## summarized results
 write.csv(choppiness.sum, file=file.path(results.path, "ancestorStats", "choppiness_sum.csv"), row.names=TRUE)  
 
 message("\n~~~~~Rscript finished paiting extant chromosomes \n")
