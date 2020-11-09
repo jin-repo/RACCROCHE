@@ -1,5 +1,5 @@
-## config file
-Before running the program, you need to make sure to edit the desired yaml file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
+## Config file
+Before running the program, you need to make sure to edit the desired yaml config file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
 
 `data.path` 
 > The path to the project data folder. For example, `~/RACCROCHE/project-monocots`.
