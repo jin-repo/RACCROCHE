@@ -1,4 +1,4 @@
-# Module 1
+# Module 1: construct gene families and list candidate adjacencies
 ## Dependencies
 
 ## Content 
@@ -74,7 +74,11 @@ $ sudo pip3 uninstall raccroche
 $ To Be Continued...
 ```
 
-# Module 2
+# Module 2: Construct ancestral contigs by Maximum Weight Matching
 
 
-# Module 3
+# Module 3: Match contigs, cluster and sort ancestral chromosomes, paint extant genomes
+
+
+
+
