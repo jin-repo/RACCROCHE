@@ -181,13 +181,3 @@ $ To Be Continued...
 
 
 
-## Content 
-
-## Usage
-
-## Input
-
-## Output
-
-
-
