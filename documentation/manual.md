@@ -93,7 +93,7 @@ You can also:
 * ``initial tree nodes adjacensies``
 
 ## Installation
-RACCROCH module 1 do not need to install packages, the only thing we need is java and python3  enviroment.
+RACCROCH module 1 do not need to install packages, the only thing you need is java and python3  enviroment.
 You will then be able to use RACCROCHE module 1 by command.
 
 
@@ -169,9 +169,6 @@ Whatever the way you installed raccroche, you can uninstall it by running::
 ```
 $ sudo pip3 uninstall module2_main
 ```
-
-
-  
 
 
 
