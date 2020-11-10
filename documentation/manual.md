@@ -58,8 +58,25 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
       25734       Ananas	      4	      25
       33018       Elaeis	      4	      16
 
+`karyotype`
+> Karyotype files of the extant genomes under the `karyotype` directory, following the naming convention `karyotype_[CoGe ID]_[genome name].txt`. For example, the karyotype of Acorus is in file `karyotype_54711_Acorus.txt`, with chromosome number and chromosome size/length (in bp) delimited by tab character:
+
+      chr	size
+      1	37743429
+      2	34360390
+      3	33772675
+      4	31994915
+      5	31167455
+      6	30970160
+      7	30771956
+      8	28400560
+      9	28235908
+      10	25518903
+      11	25169648
+      12	24790462
 
 
+### Output
 
 # Module 1: construct gene families and list candidate adjacencies
 ## Dependencies
