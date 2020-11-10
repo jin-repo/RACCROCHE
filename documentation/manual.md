@@ -66,7 +66,7 @@ This module 1 is designed to generate original gene family and initial tree node
 ### Dependencies
  - java
  - python>=3
-### [Usage](../run_raccroche)
+### Usage
 For a classic use of raccroche module 1, you need to download the folder `raccroche/module1`
 in terminal, we run::
 ```
@@ -105,8 +105,8 @@ This module 2 is designed to generate ancestors contig from the output of module
  - pandas
  - shutil
  - java
-
-### [Usage](../run_raccroche)
+a
+### Usage
 For a classic use of raccroche module 2, you can install the package by the following command. Then,
 from anywhere in your computer, run::
 ```
