@@ -18,7 +18,7 @@ There are four major modules including seven steps in the RACCROCHE pipeline. Sc
   ### [Module 2](./raccroche/module2/manual2.md): construct ancestral contigs by Maximum Weight Matching
   - Step 4: Construct contigs by maximum weight matching
   
-  ### Module 3: match contigs, cluster and sort ancestral chromosomes, paint extant genomes with ancestral chromosomes
+  ### Module 3: match contigs, cluster and sort ancestral chromosomes, paint extant genomes with ancestral synteny blocks
   - Step 5: Match synteny blocks between ancestral genome and extant genomes
   - Step 6: Cluster ancestral contigs into ancestral chromosomes based on contig co-occurrence
   - Step 7: Paint the extant genomes according to the ancestral chromosomes
