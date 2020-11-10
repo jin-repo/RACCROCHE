@@ -62,44 +62,93 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 
 
 # Module 1: construct gene families and list candidate adjacencies
-## Dependencies
+This module 1 is designed to generate original gene family and initial tree nodes adjacensies.
+### Dependencies
+ - java
+ - python>=3
+### [Usage](../run_raccroche)
+For a classic use of raccroche module 1, you need to download the folder `raccroche/module1`
+in terminal, we run::
+```
+$ cd /raccroche/dir
+$ Python3 module1/main.py
+```
+You can also check the usage in the file [run_raccroche](../run_raccroche)
 
-## Content 
+### Contenet
+ - *GF.jar* : the first java class to generate original gene family
+ - *GetGenomes.jar* : the second java class to rewrite species gene as gene family number
+ - *MWMInputTreeNode.jar* : the last java class to generate initail tree nodes adjacencies
 
-## Usage
+## Input
+  - Genomes.txt : inlude all genomes information
+  - ContigGFF : contain all sytnteny comparison and genomes GFF3 files from CoGe
+  - mwmatching.py : the algorithm to generate all initial ancestors adjacensies
+
+You can also:
+  - find examples of these files in the `project-monocots/data/ContigGFF` and  `project-monocots/data/GeneFamily` directory
+## Output
+* ``GeneFamily65.txt``
+* ``genomes.txt``
+* ``initial tree nodes adjacensies``
+
+## Installation
+RACCROCH module 1 do not need to install packages, the only thing we need is java and python3  enviroment.
+You will then be able to use RACCROCHE module 1 by command.
 
 
+
+
+# Module 2: construct ancestral contigs by Maximum Weight Matching  
+This module 2 is designed to generate ancestors contig from the output of module 1.
+### Dependencies
+ - pandas
+ - shutil
+ - java
+
+### [Usage](../run_raccroche)
+For a classic use of raccroche module 2, you can install the package by the following command. Then,
+from anywhere in your computer, run::
+```
+$ cd /the/folder/which/include/all/input/data 
+$ module2_main -g gf_file  -p parameters_file  -r results_dir
+```
+For example, in our monocots project, we can run:
+`cd  ~/raccroche/project-monocots/data/MwmInput`
+`module2_main  -g GeneFamily.csv  -p ContigParameters.txt  -r results`
 ## Input
 
   - a gene family size file, in csv format with 3 columns 'GeneFamly', 'Size', 'Genome' 
   - parameters txt file, containing all parameters for running this program, the format is:  
-    \#WindowSize = number$  
-    \#TreeNode_name = TreeNode_i$  
-    \#GF1 = numbers$  
-    \#GF2 = numbers$  
+    *\#WindowSize = number$*
+    *\#TreeNode_name = TreeNode_i$*  
+    *\#GF1 = numbers$*  
+    *\#GF2 = numbers$* 
   - candidate adjacencies of each ancestor for a specified windowsize:  
     The txt file name should follow the rule   
     `after` + `WindowSize` + `TreeNodeID`+`.txt`, such as `afterW7TreeNode1.txt`
 
 You can also:
-  - find examples of these files in the "Examples" directory, and a description of those file formats in the pdf documentation **(not finish yet)**  
+  - find examples of these files in the `project-monocots/data/MwmInput` directory
 ## Output
 * ``ancestor contigs``
 * ``retained mwm adjacencies of ancestor``
 * ``intermediate output in process``
-All files generated in process are stored in `java` and `InputPyfile` two folders
+All contigs of ancestors are stored in `project-monocots/data/Contig`
+All files generated in process are stored in `project-monocots/results/InputPyfile/java` and `project-monocots/results/InputPyfile` two folders
 
 ## Installation
 
-raccroche requires `python v3+` to run.  
+RACCROCH module 2 requires `python v3+` to run and some dependencies that introduced at `Dependencies` section. please make sure that you have isntalled those before you are going to install.
 To install the package *raccroche*, and all its dependances, from the root directory, just do::  
 ```
-$ sudo python3 setup.py install
+$ pip install git+git://github.com/jin-repo/RACCROCHE.git
 ```
-You will then be able to use raccroche from any directory in your computer, just as any other software.  
+
+You will then be able to use RACCROCHE module 2 from any directory in your computer, just as any other software.  
 Test whether it has been installed successfully:
 ```
-$ raccroche_main -h
+$ module2_main -h
     usage: getcontigs.py [-h] -g GF_FILE -p PARAMETERS_FILE -r RESULTS_DIR
 
     To run all scripts
@@ -114,29 +163,16 @@ $ raccroche_main -h
                             A directory where saving all outputs
 ```
 
-
-### Using raccroche
-For a classic use of raccroche, you can install the package by the following command. Then,
-from anywhere in your computer, run::
-```
-$ raccroche_main -g gf_file  -p parameters_file  -r results_dir
-```
-
-
 ### Uninstalling raccroche
 
 Whatever the way you installed raccroche, you can uninstall it by running::
 ```
-$ sudo pip3 uninstall raccroche
+$ sudo pip3 uninstall module2_main
 ```
 
-### Running tests
 
-```sh
-$ To Be Continued...
-```
+  
 
-# Module 2: construct ancestral contigs by Maximum Weight Matching
 
 
 # Module 3: match contigs, cluster and sort ancestral chromosomes, paint extant genomes with ancestral chromosomes
