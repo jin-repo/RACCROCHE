@@ -52,7 +52,7 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 
       genomeID    genomeName  ancestor  numChr
       54711       Acorus	      1	12
-      51364       Spirodela        1	20
+      51364       Spirodela   1	20
       51051       Dioscorea	      2	21
       33908       Asparagus	      3	10
       25734       Ananas	      4	25
