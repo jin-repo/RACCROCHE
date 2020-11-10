@@ -7,7 +7,7 @@
 ### input:  1. genome IDs and ancestor tree nodes defined in Genomes.txt 
 ###         2. contig gene feature files for each descendent genome in ./data/contigGFF/ContigGFF_gid_W*TreeNode*_*_*.txt
 ###         3. clustering results in ./data/clustering/cluster_trn+.txt
-### output: 1. positional matrix for each chromosome in each ancestor: results/ordering/posMat_ancestor*Chr*.csv
+### output: 1. sorted contigs for each chromosome in each ancestor: results/ordering/ancestor*_ordered.csv"
 
 
 source("./module3/config.R")

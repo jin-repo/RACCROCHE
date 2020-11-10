@@ -1,13 +1,13 @@
 #!/usr/bin/env Rscript
 
 ###################################################
-### This program sorts the contigs within each ancestral chromosome, 
+### This program sorts ancestral chromosomes, 
 ### based on the relative positions of contigs matched to extant genomes
 ###################################################
 ### input:  1. genome IDs and ancestor tree nodes defined in Genomes.txt 
 ###         2. contig gene feature files for each descendent genome in ./data/contigGFF/ContigGFF_gid_W*TreeNode*_*_*.txt
 ###         3. clustering results in ./data/clustering/cluster_trn+.txt
-### output: 1. positional matrix for each chromosome in each ancestor: results/ordering/posMat_ancestor*Chr*.csv
+### output: 1. positional matrix for each chromosome in each ancestor: results/ordering/ancestor*_chromosomes_ordered.csv
 
 source("./module3/config.R")
 source("./module3/helper.R")
@@ -20,7 +20,7 @@ source("./module3/helper.R")
 
 for(trn in trn.vector){
   
-  message("\nSSSSStart sorting chromosomes for ancestor ", trn, "\n\n")
+  message("\n\n\nSSSSStart sorting chromosomes for ancestor ", trn, "\n\n")
   
   ## initialize a positional matrix for each ancestor
   positionalMatrix.ancestor <- matrix(0,nrow=K, ncol=K, dimnames=list(paste0("chr",1:K), paste0("chr",1:K)))
@@ -31,9 +31,15 @@ for(trn in trn.vector){
   colnames(clusters)<-c("contig","ancestralChr")
   
   
+  
   ###########################################
   ### ordering analysis for each ancestral chromosome
   ###########################################
+  
+  ## local sorting based on extant genomes connected to the ancestor
+  ## comment this gid.vector if perform global sorting based on ALL extant genomes
+  gid.vector <- genomeCoGeID[genomeCoGeID$ancestor == trn, ]$genomeID 
+  
   ## count positional ordering data in all extant genomes
   for(gID in gid.vector) {
     
@@ -113,15 +119,13 @@ for(trn in trn.vector){
   
   sortedChr <- as.data.frame(1:K)
   sortedChr$permOrder <- as.numeric(as.character(permOrder))
-  sortedChr <- sortedChr [ order( sortedCtg.chr$permOrder), ]
+  sortedChr <- sortedChr [ order( sortedChr$permOrder), ]
   colnames(sortedChr) <- c("chromosome", "order")
   
-  file.ancestor <- file.path(results.path, "ordering", paste0("ancestor",trn,"_chromosome_ordered.csv"))
+  file.ancestor <- file.path(results.path, "ordering", paste0("ancestor",trn,"_chromosomes_ordered.csv"))
   write.csv(sortedChr, file.ancestor, row.names=FALSE)  ## contigs after ordering
   
   
 } ## loop through each ancestor tree node
 
 message("\n~~~~~Rscript finished collecting relative positional data for ancestral chromosomes ~~~~~~ \n")
-
-
