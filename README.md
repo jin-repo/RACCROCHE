@@ -25,7 +25,7 @@ There are four major modules including seven steps in the RACCROCHE pipeline. Sc
   
   More details can be found in the [diagram of module 3 program architechture and file structure](./documentation/Module3-structure.svg).
   
-  ### Module 4
+  ### Module 4: compare ancestors with extant genomes by MCScanX 
   - Step 8: Adapt MCScanX to match ancestral genomes with extant genomes
   - Step 9: Measures of Quality
 
