@@ -40,14 +40,13 @@ Before running the program, you need to make sure to edit the desired yaml confi
 
 
 
-## Files
+## Project data files
 The file structure is depicted in the [diagram of program architechture and file structure](./documentation/program-vs-file-structure.svg). 
 All the input and output data is located in the project data folder (i.e. `~/RACCROCHE/project-monocots`).
 
 ### Input
 
 `Genomes.txt`
-
 > An example showing the format genomes data (note that they must be delimited by tab characters):
 
       genomeID    genomeName  ancestor  numChr
@@ -58,7 +57,7 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
       25734       Ananas	      4	      25
       33018       Elaeis	      4	      16
 
-`karyotype`
+`karyotype` files
 > Karyotype files of the extant genomes under the `karyotype` directory, following the naming convention `karyotype_[CoGe ID]_[genome name].txt`. For example, the karyotype of Acorus is in file `karyotype_54711_Acorus.txt`, with chromosome number and chromosome size/length (in bp) delimited by tab character:
 
       chr	size
@@ -75,8 +74,30 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
       11	25169648
       12	24790462
 
+`gff` gene feature files 
+> The annotated gene features of the extant genomes under the `ContigGFF` directory.
+
 
 ### Output
+
+`ancestorStats`
+
+
+`clustering`
+
+
+`ordering`
+
+
+`paintedChrs`
+
+
+`InputPyfile`
+
+
+`MCScanPairwise`
+
+
 
 # Module 1: construct gene families and list candidate adjacencies
 ## Dependencies
