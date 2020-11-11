@@ -11,6 +11,7 @@
 
 source("./module3/config.R")
 
+
 ## read in gene family database
 # geneFamilyDB <- read.delim(file.path(GF.path,"cleanedGeneFamilies.txt", header=FALSE)
 geneFamilyDB <- read.csv(file.path(GF.path,"CleanedGF.csv"), header=FALSE)
@@ -19,7 +20,8 @@ geneFamilyDB <- geneFamilyDB[!duplicated(geneFamilyDB),]
 colnames(geneFamilyDB) <- c("geneName",	"geneFamilyID",	"chr",	"start",	"end",	"strand",	"no1",	"no2",	"genomeID",	"no3")
 
 
-for (trn in trn.vector){
+
+getContigGenes_fx <- function(trn) {
   
   # input contigs (check if the ancestral genome file exists. if not, break)
   contig.fname <- list.files(contig.path, pattern=paste0("ContigW",ws,"TreeNode",trn,"_",gf1,"_",gf2,".txt"))
@@ -60,6 +62,7 @@ for (trn in trn.vector){
       
       ## loop to iterate through all genomes
       for(gid in gid.vector) {
+        
         cat("\n... Genome ",gid, " ...")
         
         ## take intersect: remove genes families in the contig that are not in this genome
@@ -91,19 +94,26 @@ for (trn in trn.vector){
                                                   contig=contigN, start=contigGenes[contigGenes$geneFamilyID==geneID,start][i], end=contigGenes[contigGenes$geneFamilyID==geneID,end][i], geneName=contigGenes[contigGenes$geneFamilyID==geneID,geneName][i]))
             }
           }
-        }
-        
+        } ## end of for geneID 
+          
+
         ## write most common ancestor contigs in this genome into file
         ContigGFF.fname <- file.path(contigGFF.path, paste0("ContigGFF_",gid,"_W",ws,"TreeNode",trn,"_",gf1,"_",gf2,".txt"))
         write.table(plotDF, file = ContigGFF.fname, append = TRUE, sep = "\t", col.names = F, row.names = F)
         
-      } ## end of genomes
+      }  ## end of for gid
       
     } else {break} ## skip reading contigs in file, if the length of contig is less than the threshold ctgLen
   }
   
   close(con)
-  
-}  ## end of trn
+}
+
+
+system.time({
+  #lapply(trn.vector, getContigGenes_fx) ## apply to single core
+  mclapply(trn.vector, getContigGenes_fx, mc.cores = numCores) ## apply to numCores
+} , gcFirst = TRUE)
+
 
 message("\n~~~~~Rscript finished extracting gene family features")
