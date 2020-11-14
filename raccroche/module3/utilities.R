@@ -3,8 +3,10 @@
 ## if not, install them
 check.packages <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
-  if (length(new.pkg)) 
+  if (length(new.pkg)){
+    options(install.packages.compile.from.source = "always")
     install.packages(new.pkg, dependencies = TRUE)
+  }
   sapply(pkg, require, character.only = TRUE)
 }
 
