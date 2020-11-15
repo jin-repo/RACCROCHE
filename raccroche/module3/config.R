@@ -46,13 +46,13 @@ GF.path <- file.path(config.obj$data.path, "data", "GeneFamily")
 ################## check output directories ####################
 
 ## path to contig GFF files (output of getContigGenes.R)
-contigGFF.path <- file.path(config.obj$data.path, "data", "contigGFF")
+contigGFF.path <- file.path(config.obj$data.path, "data", "ContigGFF")
 
 ## path to results
 results.path <- file.path(config.obj$data.path,"results")
 
 ## create output directories if they don't exist
-dir.create(file.path(config.obj$data.path, "data", "contigGFF"), showWarnings = FALSE)
+dir.create(file.path(config.obj$data.path, "data", "ContigGFF"), showWarnings = FALSE)
 dir.create(file.path(config.obj$data.path,"results"), showWarnings = FALSE)
 
 dir.create(file.path(results.path, "ancestorStats"), showWarnings = FALSE)

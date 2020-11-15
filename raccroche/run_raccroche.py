@@ -61,10 +61,12 @@ def main(conf='config.yaml'):
     print('==================================================================')
     print('==== Sorting contigs within ancestral chromosomes ====')
     subprocess.Popen(['Rscript', 'module3/sortContigs.R'], cwd=cwd)
+    proc.wait()
 
     print('===================================================')
     print('==== Sorting ancestral chromosomes ====')
     subprocess.Popen(['Rscript', 'module3/sortChromosomes.R'], cwd=cwd)
+    proc.wait()
 
 
 if __name__ == '__main__':
