@@ -93,13 +93,13 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 
 `clustering` directory
 > The clustering results, including
-- heatmaps,
-- clustering results in txt files.
+> - heatmaps,
+> - clustering results in txt files.
 
 `ordering` directory
 > Ordering results from the linear ordering problem, including
-- contigs orders within each ancestral chromosome,
-- chromosome orders within each ancestor
+> - contigs orders within each ancestral chromosome,
+> - chromosome orders within each ancestor
 
 `paintedChrs` directory
 > Painted chromosome plots that match ancestral genomes to extant genomes
