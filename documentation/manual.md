@@ -82,23 +82,32 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 
 ### Output
 
-`ancestorStats`
-The statistical measures of ancestral genomes and their matchings to extant genomes. We have developed several measurements, including
+`ancestorStats` directory
+> The statistical measures of ancestral genomes and their matchings to extant genomes. We have developed several measurements, including
+- summary of ancestral contig lengths,
+- ancestral block measures: average block length, N50, genome coverage, average number of chromosomes, 
+- ancestral genome stats: total number of contig lengths and genes in each chromosome,
+- coherence among ancestors,
+- choppiness measures of chromosome painting.
 
 
-`clustering`
+`clustering` directory
+> The clustering results, including
+- heatmaps,
+- clustering results in txt files.
+
+`ordering` directory
+> Ordering results from the linear ordering problem, including
+- contigs orders within each ancestral chromosome,
+- chromosome orders within each ancestor
+
+`paintedChrs` directory
+> Painted chromosome plots that match ancestral genomes to extant genomes
+
+`InputPyfile` directory
 
 
-`ordering`
-
-
-`paintedChrs`
-
-
-`InputPyfile`
-
-
-`MCScanPairwise`
+`MCScanPairwise` directory
 
 
 
@@ -176,11 +185,6 @@ $ sudo pip3 uninstall raccroche
 ```sh
 $ To Be Continued...
 ```
-
-# Module 2: construct ancestral contigs by Maximum Weight Matching
-
-
-# Module 3: match contigs, cluster and sort ancestral chromosomes, paint extant genomes with ancestral chromosomes
 
 
 
