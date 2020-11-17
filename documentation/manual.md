@@ -1,11 +1,13 @@
 ## Dependencies
-The raccroche package requires `Python 3` and `R version 3.6.3`.
+- Python 3
+- Java
+- R version 3.6.3
 
 
 ## Config file
 Before running the program, you need to make sure to edit the desired yaml config file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
 
-`data.path` 
+`data.path`
 > The path to the project data folder. For example, `~/RACCROCHE/project-monocots`.
 
 `ws` 
