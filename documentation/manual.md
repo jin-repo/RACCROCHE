@@ -84,11 +84,11 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 
 `ancestorStats` directory
 > The statistical measures of ancestral genomes and their matchings to extant genomes. We have developed several measurements, including
-- summary of ancestral contig lengths,
-- ancestral block measures: average block length, N50, genome coverage, average number of chromosomes, 
-- ancestral genome stats: total number of contig lengths and genes in each chromosome,
-- coherence among ancestors,
-- choppiness measures of chromosome painting.
+> - summary of ancestral contig lengths,
+> - ancestral block measures: average block length, N50, genome coverage, average number of chromosomes, 
+> - ancestral genome stats: total number of contig lengths and genes in each chromosome,
+> - coherence among ancestors,
+> - choppiness measures of chromosome painting.
 
 
 `clustering` directory
