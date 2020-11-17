@@ -83,6 +83,7 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 ### Output
 
 `ancestorStats`
+The statistical measures of ancestral genomes and their matchings to extant genomes. We have developed several measurements, including
 
 
 `clustering`
