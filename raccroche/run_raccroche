@@ -2,13 +2,14 @@
 
 
 ####module	1
-Python3 module1/main.py
+echo "==== Generating gene families txt file and tree nodes input files===="
+echo "==== This step is very slow ... "
+Python3 module1/main1.py
 
-
+echo "==== Generating contigs for ancestors ... "
+echo "==== This step is slow ... "
 ####module	2
-#install it first according to the manual 
-cd /which folder/contain/all/mwm/input/files
-python3 module2_main  -g genefamily_file -p parameters_file -r results_dir
+python3 module2/main2.py
 
 
 ####module	3
