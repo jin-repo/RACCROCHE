@@ -1,2 +1,0 @@
-"""raccroche demo package"""
-
