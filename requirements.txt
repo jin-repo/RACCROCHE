@@ -1,4 +1,0 @@
-argparse
-pytest
-pytest-cov
-pyyaml
