@@ -193,7 +193,7 @@ All files generated in process are stored in `project-monocots/results/InputPyfi
 ## Installation
 
 RACCROCH module 2 requires `python v3+` to run and some dependencies that introduced at `Dependencies` section. please make sure that you have isntalled those before you are going to install.
-To install the package *raccroche*, and all its dependances, from the root directory, just do::  
+To install the package *module2*, and all its dependances, from the root directory, just do::  
 ```
 $ sudo pip3 install git+git://github.com/Qiaojilim/raccroche_module2.git
 ```
