@@ -70,18 +70,4 @@ Whatever the way you installed raccroche, you can uninstall it by running::
 $ sudo pip3 uninstall module2 
 ```
 
-|  |  |
-| ------ | ------ |
-|Authors | Qiaoji Xu ([QiaojiXu]) |
-|  | Lingling Jin ([LinglingJin]) |
-|  | Chunfang Zheng |
-|  | James H. Leeben-Mack |
-|  | David Sankoff |
-| Emails | limqiaojixu@gmail.com|
-|  | lingling.jin@cs.usask.ca |
-| License | [BSD] |
 
-[QiaojiXu]: <https://github.com/Qiaojilim>
-[BSD]: <https://en.wikipedia.org/wiki/BSD_licenses>
-
-  
