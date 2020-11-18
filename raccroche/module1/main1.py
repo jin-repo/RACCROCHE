@@ -6,8 +6,11 @@ Created on Thu Nov  5 08:39:20 2020
 @author: qiaojixu
 """
 
-import yaml
+
 import os
+os.system("pip3 install pyyaml")
+import yaml
+
 
 with open('./config.yaml') as f:
     data = yaml.load(f, Loader=yaml.FullLoader)
