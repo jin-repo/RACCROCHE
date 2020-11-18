@@ -16,19 +16,29 @@ def main(conf='config.yaml'):
         except yaml.YAMLError as exc:
             print(exc)
             sys.exit(1)
-
+    
     # module 1
+    print('==== Generating gene families txt file and tree nodes input files====')
+    print('==== This step is very slow ... ')
     # TODO - wrap the code in main.py in a main function so it can be imported.
     # subprocess.Popen('python3 module1/main.py')
-
+    
+    print(cwd)
+    proc = subprocess.Popen(['Python3', 'module1/main1.py'], cwd=cwd)
+    proc.wait()
+    print(proc.returncode)
+    
     # module 2
-    # install it first according to the manual
-    # cd /which folder/contain/all/mwm/input/files
-    # subprocess.Popen(
-    #     'python3 module2_main '
-    #     '-g genefamily_file -p parameters_file -r results_dir')
-
+    print('==== Generating contigs txt ... ')
+    print('==== This step is slow ... ')
+    proc = subprocess.Popen(['Python', 'module2/main2.py'], cwd=cwd)
+    proc.wait()
+    print(proc.returncode)
+    os.chdir(cwd)
+    
+    
     # module 3
+    
     print('==== Parsing and cleaning up gene families ====')
     # python replace_gene_family.py
     print('Finished parsing and cleaning up gene families')
