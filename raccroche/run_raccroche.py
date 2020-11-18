@@ -29,7 +29,7 @@ def main(conf='config.yaml'):
     print(proc.returncode)
     
     # module 2
-    print('==== Generating contigs txt ... ')
+    print('==== Generating contigs for ancestors ==== ')
     print('==== This step is slow ... ')
     proc = subprocess.Popen(['Python', 'module2/main2.py'], cwd=cwd)
     proc.wait()
