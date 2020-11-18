@@ -40,7 +40,11 @@ Before running the program, you need to make sure to edit the desired yaml confi
 > The threshold for coocurrence analysis.
 > The default is `15000 `, which only counts blocks that are longer than 15 Kbp for cooccurrence.
 
-
+### Usage
+To run the whole pipline including 3 modules, please run:
+```
+python3 run_raccroche.py
+```
 
 ## Project data files
 The file structure is depicted in the [diagram of program architechture and file structure](./documentation/program-vs-file-structure.svg). 
