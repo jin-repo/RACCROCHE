@@ -10,12 +10,12 @@ Given the phylogenetic relationships of several extant species, the reconstructi
 
 There are four major modules including seven steps in the RACCROCHE pipeline. Scripts in the pipeline are organized according to the modules as depicted in the [diagram of program architechture and file structure](./documentation/program-vs-file-structure.svg).
   
-  ### [Module 1](./raccroche/module1/manual1.md): construct gene families and list candidate adjacencies
+  ### Module 1: construct gene families and list candidate adjacencies
   - Step 1: Pre-process gene families
   - Step 2: List generalized adjacencies
   - Step 3: List candidate adjacencies
   
-  ### [Module 2](./raccroche/module2/manual2.md): construct ancestral contigs by Maximum Weight Matching
+  ### Module 2: construct ancestral contigs by Maximum Weight Matching
   - Step 4: Construct contigs by maximum weight matching
   
   ### Module 3: match contigs, cluster and sort ancestral chromosomes, paint extant genomes with ancestral synteny blocks
