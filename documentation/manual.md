@@ -1,10 +1,10 @@
-## Dependencies
+### Dependencies
 - Python 3
 - Java
 - R version 3.6.3
 
 
-## Config file
+### Config file
 Before running the program, you need to make sure to edit the desired yaml config file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
 
 `data.path`
@@ -157,7 +157,6 @@ This module 2 is designed to generate ancestors contig from the output of module
  - pandas
  - shutil
  - java
-### Content 
 
 ### Usage
 For a classic use of raccroche module 2, you can install the package by the following command. Then,
