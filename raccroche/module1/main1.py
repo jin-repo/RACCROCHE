@@ -15,7 +15,7 @@ with open('./config.yaml') as f:
 #print(data["DIS.threshold"])
 data_path = data['data.path']    
 genomes = os.path.join(data_path, "Genomes.txt")
-gffs = os.path.join(data_path, "data/gffs")
+gffs = os.path.join(data_path, "data/ContigGFF")
 treenode = os.path.join(data_path, "data/MWMInput/TreeNodeParameters.txt")
 #generate original gene family
 os.system("java -jar module1/GF.jar  " +  genomes + "  " +  gffs)
