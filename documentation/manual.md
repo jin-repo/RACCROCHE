@@ -117,9 +117,6 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 # Module 1
 This module 1 is designed to generate original gene family and initial tree nodes adjacensies.
 
-### Dependencies
- - java
- - python>=3
 ### Usage
 For a classic use of raccroche module 1, you need to download the folder `raccroche/module1`
 in terminal, we run::
@@ -153,11 +150,6 @@ You will then be able to use RACCROCHE module 1 by command.
 
 # Module 2
 This module 2 is designed to generate ancestors contig from the output of module 1.
-### Dependencies
- - pandas
- - shutil
- - java
-
 ### Usage
 For a classic use of raccroche module 2, you can install the package by the following command. Then,
 from anywhere in your computer, run::
