@@ -5,7 +5,7 @@ check.packages <- function(pkg){
   new.pkg <- pkg[!(pkg %in% installed.packages()[, "Package"])]
   if (length(new.pkg)){
     options(install.packages.compile.from.source = "always")
-    install.packages(new.pkg, dependencies = TRUE)
+    install.packages(new.pkg, dependencies = TRUE, repos = "http://cran.us.r-project.org")
   }
   sapply(pkg, require, character.only = TRUE)
 }
