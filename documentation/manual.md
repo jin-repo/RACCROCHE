@@ -1,10 +1,16 @@
-### Dependencies
+# Dependencies
 - Python 3
 - Java
 - R version 3.6.3
 
+# Usage
+Before running the pipeline, users need to set up a config file and have the project data in place. The file structure is depicted in the [diagram of program architechture and file structure](./documentation/program-vs-file-structure.svg). 
 
-### Config file
+First, specify a project data folder where the project data is located and a set of parameters in the config file.
+
+Second, depost the input data file into the project data folder.
+
+## Config file
 Before running the program, you need to make sure to edit the desired yaml config file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
 
 `data.path`
@@ -40,17 +46,10 @@ Before running the program, you need to make sure to edit the desired yaml confi
 > The threshold for coocurrence analysis.
 > The default is `15000 `, which only counts blocks that are longer than 15 Kbp for cooccurrence.
 
-### Usage
-To run the whole pipline including 3 modules, please run:
-```
-python3 run_raccroche.py
-```
 
-## Project data files
-The file structure is depicted in the [diagram of program architechture and file structure](./documentation/program-vs-file-structure.svg). 
+## Project data input
+
 All the input and output data is located in the project data folder (i.e. `~/RACCROCHE/project-monocots`).
-
-### Input
 
 `Genomes.txt`
 > An example showing the format genomes data (note that they must be delimited by tab characters):
@@ -84,7 +83,19 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 > The annotated gene features of the extant genomes under the `ContigGFF` directory.
 
 
-### Output
+
+
+## Run the raccroche pipeline
+
+To run the whole pipline including 3 modules, please run:
+```
+$ python3 run_raccroche.py
+```
+
+
+# Project Output
+
+Raccroche produces results in the `results` folder under the project data directory. The results are partitioned into separate folders as follow.
 
 `ancestorStats` directory
 > The statistical measures of ancestral genomes and their matchings to extant genomes. We have developed several measurements, including
@@ -114,8 +125,11 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 `MCScanPairwise` directory
 
 
-# Module 1
-This module 1 is designed to generate original gene family and initial tree nodes adjacensies.
+# Specifics of each module
+Each module does specific task and could be run separately.
+
+## Module 1
+Module 1 is designed to generate original gene family and initial tree nodes adjacensies.
 
 ### Usage
 For a classic use of raccroche module 1, you need to download the folder `raccroche/module1`
@@ -131,24 +145,24 @@ $ Python3 module1/main.py
  - *GetGenomes.jar* : the second java class to rewrite species gene as gene family number
  - *MWMInputTreeNode.jar* : the last java class to generate initail tree nodes adjacencies
 
-## Input
+### Input
   - Genomes.txt : inlude all genomes information
   - ContigGFF : contain all sytnteny comparison and genomes GFF3 files from CoGe
   - mwmatching.py : the algorithm to generate all initial ancestors adjacensies
 
 You can also:
   - find examples of these files in the `project-monocots/data/ContigGFF` and  `project-monocots/data/GeneFamily` directory
-## Output
+### Output
 * ``GeneFamily65.txt``
 * ``genomes.txt``
 * ``initial tree nodes adjacensies``
 
-## Installation
+### Installation
 RACCROCH module 1 do not need to install packages, the only thing we need is java and python3  enviroment.
 You will then be able to use RACCROCHE module 1 by command.
 
 
-# Module 2
+## Module 2
 This module 2 is designed to generate ancestors contig from the output of module 1.
 ### Usage
 For a classic use of raccroche module 2, you can install the package by the following command. Then,
@@ -160,7 +174,7 @@ $ module2_main -g gf_file  -p parameters_file  -r results_dir
 For example, in our monocots project, we can run:
 `cd  ~/raccroche/project-monocots/data/MwmInput`
 `module2_main  -g GeneFamily.csv  -p ContigParameters.txt  -r results/`
-## Input
+### Input
 
   - a gene family size file, in csv format with 3 columns 'GeneFamly', 'Size', 'Genome' 
   - parameters txt file, containing all parameters for running this program, the format is:  
@@ -174,14 +188,14 @@ For example, in our monocots project, we can run:
 
 You can also:
   - find examples of these files in the `project-monocots/data/MwmInput` directory
-## Output
+### Output
 * ``ancestor contigs``
 * ``retained mwm adjacencies of ancestor``
 * ``intermediate output in process``
 All contigs of ancestors are stored in `project-monocots/data/Contig`
 All files generated in process are stored in `project-monocots/results/InputPyfile/java` and `project-monocots/results/InputPyfile` two folders
 
-## Installation
+### Installation
 
 RACCROCH module 2 requires `python v3+` to run and some dependencies that introduced at `Dependencies` section. please make sure that you have isntalled those before you are going to install.
 To install the package *module2*, and all its dependances, from the root directory, just do::  
@@ -208,11 +222,12 @@ $ module2_main -h
 ```
 
 ### Uninstalling raccroche
-
-Whatever the way you installed raccroche, you can uninstall it by running::
+You can uninstall module 2 by running::
 ```
 $ sudo pip3 uninstall module2
 ```
 
+## Module 3
+The program architeture of Module 3 is depicted in the [diagram of module 3 program architechture and file structure](./documentation/Module3-structure.svg). The R scripts in each step can be run separately.
 
 
