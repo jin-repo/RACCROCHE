@@ -1,6 +1,6 @@
 genomeID	genomeName	ancestor	numChr	gff
 25734	Ananas	4	25	Ananas_comosus_pineapple_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid25734.gff
-33018	Elaeis	4	16	Elaeis_guineensis_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33018.gff;
+33018	Elaeis	4	16	Elaeis_guineensis_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33018.gff
 33908	Asparagus	3	10	Asparagus_officinalis_garden_asparagus_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33908.gff
 51051	Dioscorea	2	21	Dioscorea_rotundata_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51051.gff
 51364	Spirodela	1	20	Spirodela_polyrhiza_Greater_Duckweed_strain_9509_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51364.gff
