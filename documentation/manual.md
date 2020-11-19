@@ -10,7 +10,7 @@ First, specify a project data folder where the project data is located and a set
 
 Second, depost the input data file into the project data folder.
 
-## Config file
+### Config file
 Before running the program, you need to make sure to edit the desired yaml config file (`config.yaml`) under the raccroche directory in order to set up parameters for the algorithms and point the program to appropriate data directory. 
 
 `data.path`
@@ -47,7 +47,7 @@ Before running the program, you need to make sure to edit the desired yaml confi
 > The default is `15000 `, which only counts blocks that are longer than 15 Kbp for cooccurrence.
 
 
-## Project data input
+### Project data input
 
 All the input and output data is located in the project data folder (i.e. `~/RACCROCHE/project-monocots`).
 
@@ -85,7 +85,7 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 
 
 
-## Run the raccroche pipeline
+### Run the raccroche pipeline
 
 To run the whole pipline including 3 modules, please run:
 ```
