@@ -255,7 +255,7 @@ $ python -m jcvi.formats.fasta format Ppersica_298_v2.1.cds.fa.gz peach.cds
 ```
 In this monocots project, you can find all preprocessed cds and bed files in `MCScanPairwise` folder in the results folder under the project data directory
 
- - Next use the jcvi commends to get synteny blocks:
+ - Next use the jcvi commands to get synteny blocks:
 ```
 #get syteny blocks
 $ ls *.???
@@ -265,7 +265,7 @@ $ python -m jcvi.compara.catalog ortholog acorus ancestor1 --cscore=.60 --no_str
 
 - Final step is to run `jcvi.graphics.karyotype` module of MCScan to plot syteny blocks from last step
 
-Before running the commend, we need to prepare the `seqids` and `layout` two input files which:
+Before running the command, we need to prepare the `seqids` and `layout` two input files which:
 `seqids` file, which tells the plotter which set of chromosomes to include. 
 `layout` file, which tells the plotter where to draw what. 
 see details [here](https://github.com/tanghaibao/jcvi/wiki/MCscan-(Python-version)#macrosynteny-getting-fancy)
