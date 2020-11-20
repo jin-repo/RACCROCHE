@@ -275,6 +275,6 @@ With all input files ready, let's plot.
 `$ python -m jcvi.graphics.karyotype seqids layout`
 This generates our karyotype figure:
 
-![a1_aco.jpeg](./documentation/image/a1_aco.jpeg)
+![image](https://github.com/jin-repo/RACCROCHE/blob/main/documentation/image/a1_aco.jpg)
 
 
