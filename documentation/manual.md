@@ -235,7 +235,7 @@ $ sudo pip3 uninstall module2
 The program architeture of Module 3 is depicted in the [diagram of module 3 program architechture and file structure](./documentation/Module3-structure.svg). The R scripts in each step can be run separately.
 
 
-## Module 4 - MCScan plot 
+## Module 4 - MCScan Pairwise Synteny Plot 
 Here is the jcvi install detailed intrcution https://github.com/tanghaibao/jcvi. After you have installed it on your laptop then you just need two sections: 
 
 `Pairwise synteny search` and `Macrosynteny visualization`
