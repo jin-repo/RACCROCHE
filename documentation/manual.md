@@ -57,10 +57,10 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
     genomeID    genomeName  ancestor  numChr       gff
     25734       Ananas         4        25      Ananas_comosus_pineapple_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid25734.gff
     33018       Elaeis         4        16      Elaeis_guineensis_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33018.gff
-    33908        Asparagus       3        10      Asparagus_officinalis_garden_asparagus_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33908.gff
-    51051        Dioscorea       2        21      Dioscorea_rotundata_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51051.gff
-    51364        Spirodela       1        20      Spirodela_polyrhiza_Greater_Duckweed_strain_9509_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51364.gff
-    54711        Acorus       1        12      Acorus_americanus_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid54711.gff
+    33908       Asparagus      3        10      Asparagus_officinalis_garden_asparagus_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33908.gff
+    51051       Dioscorea      2        21      Dioscorea_rotundata_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51051.gff
+    51364       Spirodela      1        20      Spirodela_polyrhiza_Greater_Duckweed_strain_9509_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51364.gff
+    54711       Acorus         1        12      Acorus_americanus_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid54711.gff
 
 `karyotype` files
 > Karyotype files of the extant genomes under the `karyotype` directory, following the naming convention `karyotype_[CoGe ID]_[genome name].txt`. For example, the karyotype of Acorus is in file `karyotype_54711_Acorus.txt`, with chromosome number and chromosome size/length (in bp) delimited by tab character:
