@@ -273,10 +273,12 @@ Before running the command, we need to prepare the `seqids` and `layout` two inp
 `layout` file, which tells the plotter where to draw what. 
 
 see details [here](https://github.com/tanghaibao/jcvi/wiki/MCscan-(Python-version)#macrosynteny-getting-fancy)          
-Once we have those files, then we can run:
+Once we have those files, then we can run:    
+
 `$ python -m jcvi.compara.synteny screen --minspan=30 --simple acorus.ancestor1.anchors acorus.ancestor1.anchors.new` 
 
-With all input files ready, let's plot.            
+With all input files ready, let's plot
+
 `$ python -m jcvi.graphics.karyotype seqids layout`
 
 This generates our karyotype figure:
