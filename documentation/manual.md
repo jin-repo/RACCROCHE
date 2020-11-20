@@ -273,6 +273,7 @@ Once we have those files, then we can run:
 `$ python -m jcvi.compara.synteny screen --minspan=30 --simple acorus.ancestor1.anchors acorus.ancestor1.anchors.new` 
 With all input files ready, let's plot.
 `$ python -m jcvi.graphics.karyotype seqids layout`
+
 This generates our karyotype figure:
 
 ![image](https://github.com/jin-repo/RACCROCHE/blob/main/documentation/image/a1_aco.jpg)
