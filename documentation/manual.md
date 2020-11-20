@@ -54,30 +54,30 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 `Genomes.txt`
 > An example showing the format genomes data (note that they must be delimited by tab characters):
 
-      genomeID    genomeName  ancestor  numChr
-      54711       Acorus	      1	      12
-      51364       Spirodela       1	      20
-      51051       Dioscorea	      2	      21
-      33908       Asparagus	      3	      10
-      25734       Ananas	      4	      25
-      33018       Elaeis	      4	      16
+    genomeID    genomeName  ancestor  numChr       gff
+    25734       Ananas         4        25      Ananas_comosus_pineapple_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid25734.gff
+    33018       Elaeis         4        16      Elaeis_guineensis_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33018.gff
+    33908        Asparagus       3        10      Asparagus_officinalis_garden_asparagus_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid33908.gff
+    51051        Dioscorea       2        21      Dioscorea_rotundata_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51051.gff
+    51364        Spirodela       1        20      Spirodela_polyrhiza_Greater_Duckweed_strain_9509_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid51364.gff
+    54711        Acorus       1        12      Acorus_americanus_annos1-cds0-id_typename-nu1-upa1-add_chr0.gid54711.gff
 
 `karyotype` files
 > Karyotype files of the extant genomes under the `karyotype` directory, following the naming convention `karyotype_[CoGe ID]_[genome name].txt`. For example, the karyotype of Acorus is in file `karyotype_54711_Acorus.txt`, with chromosome number and chromosome size/length (in bp) delimited by tab character:
 
-      chr	size
-      1	37743429
-      2	34360390
-      3	33772675
-      4	31994915
-      5	31167455
-      6	30970160
-      7	30771956
-      8	28400560
-      9	28235908
-      10	25518903
-      11	25169648
-      12	24790462
+      chr    size
+      1    37743429
+      2    34360390
+      3    33772675
+      4    31994915
+      5    31167455
+      6    30970160
+      7    30771956
+      8    28400560
+      9    28235908
+      10    25518903
+      11    25169648
+      12    24790462
 
 `gff` gene feature files 
 > The annotated gene features of the extant genomes under the `ContigGFF` directory.
@@ -89,6 +89,7 @@ All the input and output data is located in the project data folder (i.e. `~/RAC
 
 To run the whole pipline including 3 modules, please run:
 ```
+$ git clone https://github.com/jin-repo/RACCROCHE.git
 $ python3 run_raccroche.py
 ```
 
@@ -120,11 +121,15 @@ Raccroche produces results in the `results` folder under the project data direct
 > Painted chromosome plots that match ancestral genomes to extant genomes
 
 `InputPyfile` directory
+> All process files during the maximum weight matching including
+> - mwm adjacency output
+> - java process files
 
-
-`MCScanPairwise` directory
-
-
+`MCScanPairwise` directory  
+> All pairwise syteny plot by applying [MCScan](https://github.com/tanghaibao/jcvi/wiki/MCscan-(Python-version)#macrosynteny-getting-fancy) with output including  
+> - `instrcution.md` on explaining how to aplly MCScan
+> - `mcdata` floder containg all necessary input data files
+> - MCScan karyotype `plot` output
 # Specifics of each module
 Each module does specific task and could be run separately.
 
@@ -165,7 +170,7 @@ You will then be able to use RACCROCHE module 1 by command.
 ## Module 2
 This module 2 is designed to generate ancestors contig from the output of module 1.
 ### Usage
-For a classic use of raccroche module 2, you can install the package by the following command. Then,
+For a general use of raccroche module 2, you can install the package by the following command. Then,
 from anywhere in your computer, run::
 ```
 $ cd /the/folder/which/include/all/input/data 
@@ -229,5 +234,6 @@ $ sudo pip3 uninstall module2
 
 ## Module 3
 The program architeture of Module 3 is depicted in the [diagram of module 3 program architechture and file structure](./documentation/Module3-structure.svg). The R scripts in each step can be run separately.
+
 
 
