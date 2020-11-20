@@ -275,6 +275,6 @@ With all input files ready, let's plot.
 `$ python -m jcvi.graphics.karyotype seqids layout`
 This generates our karyotype figure:
 
-![image](./documentation/image/a1_aco.jpeg)
+![a1_aco.jpeg](./documentation/image/a1_aco.jpeg)
 
 
