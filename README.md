@@ -46,7 +46,7 @@ In addition to the pipeline, we also provide our project data (under the "projec
 
 ### Citations:   
   - If you use the raccroche pipline for ancestral contigs reconstruction, please cite:   
-*RACCROCHE: ancestral flowering plantchromosomes and gene ordersbased on generalized adjacenciesand chromosomal gene co-occurrences* [need to add link]  
+[RACCROCHE: ancestral flowering plantchromosomes and gene ordersbased on generalized adjacenciesand chromosomal gene co-occurrences](https://link.springer.com/chapter/10.1007/978-3-030-79290-9_9)  
 
 
    [QiaojiXu]: <https://github.com/Qiaojilim>
