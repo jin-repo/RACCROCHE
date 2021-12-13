@@ -1,0 +1,7 @@
+genomeID	genomeName	ancestor	numChr
+28620	Aquilegea	1	7
+35405	Nelumbo	1	8
+57266	Tetracentron	2	19
+57268	Buxus	2	14
+54057	Amaranthus	3	16
+19990	Vitis	3	19
